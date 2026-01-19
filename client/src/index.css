@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply transition-colors duration-500;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-500;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+  
+  .gradient-header {
+    background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #8B5CF6 100%);
+    transition: background 500ms ease;
+  }
+
+  .dark .gradient-header {
+    background: linear-gradient(135deg, #0f172a 0%, #0f3a3a 50%, #0b7285 100%);
+  }
+  
+  .gradient-button {
+    background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+    transition: background 500ms ease;
+  }
+
+  .dark .gradient-button {
+    background: linear-gradient(135deg, #0f766e 0%, #0891b2 100%);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .dark .gradient-text {
+    background: linear-gradient(135deg, #5eead4 0%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .dark input,
+  .dark textarea,
+  .dark select {
+    @apply bg-slate-900 text-slate-100 border-slate-700 placeholder:text-slate-500;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply gradient-button hover:opacity-90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-lg border border-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2;
+  }
+
+  .dark .btn-secondary {
+    @apply bg-slate-900 hover:bg-slate-800 text-slate-200 border-slate-700 focus:ring-cyan-400 focus:ring-offset-slate-950;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+
+  .dark .card {
+    @apply bg-slate-900 border-slate-800;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-600 focus:border-transparent transition-colors duration-200;
+  }
+
+  .dark .input-field {
+    @apply border-slate-700 focus:ring-cyan-400;
+  }
+  
+  .textarea-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-600 focus:border-transparent transition-colors duration-200 resize-y min-h-[100px];
+  }
+
+  .dark .textarea-field {
+    @apply border-slate-700 focus:ring-cyan-400;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-violet-700 to-purple-800 bg-clip-text text-transparent;
+  }
+
+  .dark .bg-white {
+    @apply bg-slate-900;
+  }
+
+  .dark .bg-gray-50 {
+    @apply bg-slate-950;
+  }
+
+  .dark .bg-gray-100 {
+    @apply bg-slate-900;
+  }
+
+  .dark .bg-gray-200 {
+    @apply bg-slate-800;
+  }
+
+  .dark .text-gray-900 {
+    @apply text-slate-100;
+  }
+
+  .dark .text-gray-800 {
+    @apply text-slate-200;
+  }
+
+  .dark .text-gray-700 {
+    @apply text-slate-200;
+  }
+
+  .dark .text-gray-600 {
+    @apply text-slate-300;
+  }
+
+  .dark .text-gray-500 {
+    @apply text-slate-400;
+  }
+
+  .dark .text-gray-400 {
+    @apply text-slate-500;
+  }
+
+  .dark .border-gray-200 {
+    @apply border-slate-800;
+  }
+
+  .dark .border-gray-300 {
+    @apply border-slate-700;
+  }
+
+  .dark .bg-primary-50 {
+    @apply bg-slate-800;
+  }
+
+  .dark .bg-primary-100 {
+    @apply bg-slate-800;
+  }
+
+  .dark .bg-blue-100 {
+    @apply bg-sky-900;
+  }
+
+  .dark .bg-green-100 {
+    @apply bg-emerald-900;
+  }
+
+  .dark .bg-yellow-100 {
+    @apply bg-amber-900;
+  }
+
+  .dark .bg-purple-100 {
+    @apply bg-violet-900;
+  }
+
+  .dark .bg-red-100 {
+    @apply bg-rose-900;
+  }
+
+  .dark .bg-indigo-100 {
+    @apply bg-indigo-900;
+  }
+
+  .dark .bg-orange-100 {
+    @apply bg-amber-900;
+  }
+
+  .dark .text-blue-800 {
+    @apply text-sky-200;
+  }
+
+  .dark .text-green-800 {
+    @apply text-emerald-200;
+  }
+
+  .dark .text-yellow-800 {
+    @apply text-amber-200;
+  }
+
+  .dark .text-purple-800 {
+    @apply text-violet-200;
+  }
+
+  .dark .text-red-800 {
+    @apply text-rose-200;
+  }
+
+  .dark .text-indigo-800 {
+    @apply text-indigo-200;
+  }
+
+  .dark .text-orange-800 {
+    @apply text-amber-200;
+  }
+
+  .dark .bg-green-50 {
+    @apply bg-emerald-950;
+  }
+
+  .dark .border-green-200 {
+    @apply border-emerald-800;
+  }
+
+  .dark .text-green-700 {
+    @apply text-emerald-200;
+  }
+
+  .dark .bg-yellow-50 {
+    @apply bg-amber-950;
+  }
+
+  .dark .border-yellow-200 {
+    @apply border-amber-800;
+  }
+
+  .dark .text-yellow-800 {
+    @apply text-amber-200;
+  }
+
+  .dark .bg-red-50 {
+    @apply bg-rose-950;
+  }
+
+  .dark .border-red-200 {
+    @apply border-rose-800;
+  }
+
+  .dark .text-red-500,
+  .dark .text-red-600 {
+    @apply text-rose-300;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
