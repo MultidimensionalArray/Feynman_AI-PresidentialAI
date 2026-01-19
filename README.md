@@ -1,6 +1,6 @@
-# Feynman Technique Learning App
+# Feynman Technique Learning App 
 
-An educational application that uses the Feynman Technique to help users learn complex topics through AI-powered explanations and interactive prompts.
+This is the build of the learning app for the Submission in the Presidential AI Challenge. An educational application that uses the Feynman Technique to help users learn complex topics through AI-powered explanations and interactive prompts.
 
 ## Features
 
